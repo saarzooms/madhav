@@ -69,7 +69,9 @@
 </head>
 
 <body>
-
+<div class="wrapper">
+   <?php include('header.php');?>
+ </div>
  
   <script src="app/js/jquery.min.js"></script>
   <script src="app/js/scripts.js"></script>
