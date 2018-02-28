@@ -68,16 +68,32 @@
    <!-- =============== VENDOR SCRIPTS ===============-->
    <!-- MODERNIZR-->
    <script src="vendor/modernizr/modernizr.custom.js"></script>
+   <!-- MATCHMEDIA POLYFILL-->
+   <script src="vendor/matchMedia/matchMedia.js"></script>
    <!-- JQUERY-->
    <script src="vendor/jquery/dist/jquery.js"></script>
    <!-- BOOTSTRAP-->
    <script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
    <!-- STORAGE API-->
    <script src="vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
-   <!-- PARSLEY-->
-   <script src="vendor/parsleyjs/dist/parsley.min.js"></script>
+   <!-- JQUERY EASING-->
+   <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
+   <!-- ANIMO-->
+   <script src="../vendor/animo.js/animo.js"></script>
+   <!-- SLIMSCROLL-->
+   <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
+   <!-- SCREENFULL-->
+   <script src="vendor/screenfull/dist/screenfull.js"></script>
+   <!-- LOCALIZE-->
+   <script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
+   <!-- RTL demo-->
+   <script src="app/js/demo/demo-rtl.js"></script>
+    <!-- =============== Toast Message ===============-->
+ <script type="text/javascript" src="toastmessage/javascript/jquery.toastmessage.js"></script>
+ 
    <!-- =============== APP SCRIPTS ===============-->
    <script src="app/js/app.js"></script>
+   <script type="text/javascript" src="app/js/AjaxFileUpload.js"></script>
    <script src="js/login.js"></script>
 </body>
 
