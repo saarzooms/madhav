@@ -7,14 +7,14 @@ $(document).ready(function() {
 		var username = document.getElementById('Email_Id_Login').value;
 		var pass = document.getElementById('Password_Login').value;
 		
-		//alert(username +' '+pass);
+		alert(username +' '+pass);
 		
 		$.ajax({ 
 					type: "POST",
 					url: "ajax/login_data.php?username="+username+"&pass="+pass,
 					success: function(data)
 					{
-						//alert(data);
+						alert(data);
 						var result = $.trim(data);
 						//$('#l').html(result);		
 						 if(result == 1)
