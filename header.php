@@ -6,7 +6,7 @@ include('db/connection.php');
 $roll="";
 if(isset($_SESSION['id'])=="")
 {
-	header("Location:index.php");
+	header("Location:login.php");
 }
 else{
 	$user_id=$_SESSION['id'];
@@ -209,117 +209,232 @@ else{
 				  {
 				?>
                   <li class=" ">
-                    <a href="#projects" title="Dashboard" data-toggle="collapse">
+                    <a href="#dashboard" title="Dashboard" data-toggle="collapse">
                         <em class="icon-user"></em>
-                        <span data-localize="sidebar.nav.DASHBOARD">Projects</span>
+                        <span data-localize="sidebar.nav.DASHBOARD">Loan officers</span>
                      </a>  
-                     <ul id="projects" class="nav sidebar-subnav collapse">
+                     <ul id="dashboard" class="nav sidebar-subnav collapse">
                        
                         <li class=" ">
-                           <a href="projectbasic.php" title="Projects Basic">
-								<span><em class="icon-plus"></em> New Project</span>
+                           <a href="loanofficer.php" title="Loan Officer">
+													   <span><em class="icon-plus"></em> Loan Officer</span>
                            </a>
                         </li>
-                        
-                     </ul>
-                  </li>
-				  <li class=" ">
-                    <a href="#keyvariable" title="Dashboard" data-toggle="collapse">
-                        <em class="icon-user"></em>
-                        <span data-localize="sidebar.nav.DASHBOARD">Key Varibles</span>
-                     </a>  
-                     <ul id="keyvariable" class="nav sidebar-subnav collapse">
-                       
-                        <li class=" ">
-                           <a href="keyvariable.php" title="Projects Basic">
-								<span><em class="icon-plus"></em> New Key Varible</span>
-                           </a>
-                        </li>
-                        
-                     </ul>
-                  </li>
-				  <li class=" ">
-                    <a href="#attendance" title="Dashboard" data-toggle="collapse">
-                        <em class="icon-user"></em>
-                        <span data-localize="sidebar.nav.DASHBOARD">Attendance</span>
-                     </a>  
-                     <ul id="attendance" class="nav sidebar-subnav collapse">
-                       
-                        <li class=" ">
-                           <a href="attendance.php" title="Projects Basic">
-								<span><em class="icon-plus"></em> New Joining</span>
-                           </a>
-                        </li>
-						<li class=" ">
-                           <a href="traningattendance.php" title="Projects Basic">
-								<span><em class="icon-plus"></em> Traning Attendance</span>
-                           </a>
-                        </li>
-                        
-                     </ul>
-                  </li>
-				  <li class=" ">
-                    <a href="#material" title="Dashboard" data-toggle="collapse">
-                        <em class="icon-user"></em>
-                        <span data-localize="sidebar.nav.DASHBOARD">Material</span>
-                     </a>  
-                     <ul id="material" class="nav sidebar-subnav collapse">
-                       
-                        <li class=" ">
-                           <a href="material.php" title="Projects Basic">
-								<span><em class="icon-plus"></em> Material Receipt</span>
-                           </a>
-                        </li>
-						<li class=" ">
-                           <a href="materialissue.php" title="Projects Basic">
-								<span><em class="icon-plus"></em> Material Issue</span>
-                           </a>
-                        </li>
-						<li class=" ">
-                           <a href="materialreturn.php" title="Projects Basic">
-								<span><em class="icon-plus"></em> Material Return</span>
-                           </a>
-                        </li>
-                        
-                     </ul>
-                  </li>
-				  <li class=" ">
-                    <a href="#progress" title="Dashboard" data-toggle="collapse">
-                        <em class="icon-user"></em>
-                        <span data-localize="sidebar.nav.DASHBOARD">Progress Report</span>
-                     </a>  
-                     <ul id="progress" class="nav sidebar-subnav collapse">
-                       
-                        <li class=" ">
-                           <a href="progressreport.php" title="Projects Basic">
-								<span><em class="icon-plus"></em> Progress Report</span>
-                           </a>
-                        </li>
-						
-                        
-                     </ul>
-                  </li>
-				  <li class=" ">
-                    <a href="#machine" title="Dashboard" data-toggle="collapse">
-                        <em class="icon-user"></em>
-                        <span data-localize="sidebar.nav.DASHBOARD"> Machine Arrival</span>
-                     </a>  
-                     <ul id="machine" class="nav sidebar-subnav collapse">
-                       
-                        <li class=" ">
-                           <a href="machinelogbook.php" title="Projects Basic">
-								<span><em class="icon-plus"></em> Machine Arrival</span>
-                           </a>
-                        </li>
-						
                         
                      </ul>
                   </li>
 				  <?php
 				  }
 				  ?>
-			
-		   
+				  <?php
+				  if($roll=='Admin' || $roll=='Loanofficer'){
+					  ?>
+				         <li class=" ">
+                    <a href="#customer" title="Customer" data-toggle="collapse">
+                        <em class="icon-user"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Customers</span>
+                     </a>  
+                     <ul id="customer" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="customer.php" title="Customer">
+													   <span><em class="icon-plus"></em> Customer</span>
+                           </a>
+                        </li>
+                        
+                     </ul>
+                  </li> 
+				  <?php
+				  }
+				  ?>
+				  <?php
+				  if($roll=='Admin' || $roll=='Loanofficer'){
+					  ?>
+				       <li class=" ">
+                    <a href="#partner" title="Partner" data-toggle="collapse">
+                        <em class="icon-user"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Trusted Partners</span>
+                     </a>  
+                     <ul id="partner" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="trustedpartner.php" title="Partner">
+													   <span><em class="icon-plus"></em> Trusted Partner</span>
+                           </a>
+                        </li>
+						         
+                     </ul>
+                  </li> 
+				  <?php
+				  }
+				  ?>
+				  <?php
+				  if($roll=='Admin'){
+					  ?>
+				        <li class=" ">
+                    <a href="#business" title="Business" data-toggle="collapse">
+                        <em class="fa fa-briefcase"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Business Types</span>
+                     </a>  
+                     <ul id="business" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="businesstype.php" title="business">
+													   <span><em class="icon-plus"></em> Business Type</span>
+                           </a>
+                        </li>
+						         
+                     </ul>
+                  </li>
+				  <?php
+				  }
+           ?>
+		   <?php
+				  if($roll=='Admin'){
+					  ?>
+				        <li class=" ">
+                    <a href="#plan" title="plan" data-toggle="collapse">
+                        <em class="fa fa-briefcase"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Plan</span>
+                     </a>  
+                     <ul id="plan" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="plan.php" title="business">
+							<span><em class="icon-plus"></em> Plan</span>
+                           </a>
+                        </li>
+						         
+                     </ul>
+                  </li>
+				  <?php
+				  }
+           ?>
+		   <?php
+				  if($roll=='Admin'){
+					  ?>
+				        <li class=" ">
+                    <a href="#report" title="report" data-toggle="collapse">
+                        <em class="fa fa-list"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Reports</span>
+                     </a>  
+                     <ul id="report" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="report.php" title="business">
+							<span><em class="icon-list"></em> Loan Officer subscriptions</span>
+                           </a>
+                        </li>
+						         
+                     </ul>
+                  </li>
+				  <?php
+				  }
+           ?>
+		    <?php
+				  if($roll=='Admin'){
+					  ?>
+				        <li class=" ">
+                    <a href="#setting" title="Business" data-toggle="collapse">
+                        <em class="fa fa-cog"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Settings</span>
+                     </a>  
+                     <ul id="setting" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="bpmi.php" title="business">
+													   <span><em class="icon-plus"></em> BPMI</span>
+                           </a>
+                        </li>
+						             <li class=" ">
+                           <a href="bpmiadjustments.php" title="business">
+													   <span><em class="icon-plus"></em> BPMI Adjustments</span>
+                           </a>
+                        </li>
+						            <li class=" ">
+                           <a href="insurancebasicpremiumrates.php" title="business">
+													   <span><em class="icon-plus"></em> Insurance Basic Premium Rates</span>
+                           </a>
+                        </li>
+												<li class=" ">
+                           <a href="insurancerange.php" title="business">
+													   <span><em class="icon-plus"></em> Insurance Range</span>
+                           </a>
+                        </li>
+						         
+                     </ul>
+                  </li>
+				  <?php
+				  }
+           ?>
+		   <?php
+				  if($roll=='Loanofficer'){
+					  ?>
+				        <li class=" ">
+                    <a href="#url" title="Business" data-toggle="collapse">
+                        <em class="fa fa-link"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Generate Url</span>
+                     </a>  
+                     <ul id="url" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="hasedurl.php" title="business">
+													   <span><em class="icon-plus"></em> Url</span>
+                           </a>
+                        </li>
+						         
+                     </ul>
+                  </li>
+				  <?php
+				  }
+           ?>
+		   <?php
+				  if($roll=='Loanofficer'){
+					  ?>
+				        <li class=" ">
+                    <a href="#loan" title="LoanInstance" data-toggle="collapse">
+                        <em class="fa fa-link"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Loan Instance</span>
+                     </a>  
+                     <ul id="loan" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="createinstance.php" title="LoanInstance">
+													   <span><em class="icon-plus"></em>Create Loan Instance</span>
+                           </a>
+                        </li>
+						         
+                     </ul>
+                  </li>
+				  <?php
+				  }
+           ?>
+		  <?php
+				  if($roll=='Loanofficer'){
+					  ?>
+				        <li class=" ">
+                    <a href="#email" title="Business" data-toggle="collapse">
+                        <em class="fa fa-envelope"></em>
+                        <span data-localize="sidebar.nav.DASHBOARD">Email</span>
+                     </a>  
+                     <ul id="email" class="nav sidebar-subnav collapse">
+                       
+                        <li class=" ">
+                           <a href="emailsetting.php" title="Email">
+													   <span><em class="fa fa-cog"></em> Settings</span>
+                           </a>
+                        </li>
+						            <li class=" ">
+                           <a href="email.php" title="Email">
+													   <span><em class="fa fa fa-envelope-o"></em> Compose</span>
+                           </a>
+                        </li>
+						         
+                     </ul>
+                  </li>
+				  <?php
+				  }
+           ?>
                      </ul>
                
                <!-- END sidebar nav-->
