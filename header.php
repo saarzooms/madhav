@@ -6,7 +6,7 @@ include('db/connection.php');
 $roll="";
 if(isset($_SESSION['id'])=="")
 {
-	header("Location:login.php");
+	header("Location:index.php");
 }
 else{
 	$user_id=$_SESSION['id'];
