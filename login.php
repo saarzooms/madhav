@@ -66,8 +66,7 @@
       </div>
    </div>
    <!-- =============== VENDOR SCRIPTS ===============-->
-   <!-- JQUERY-->
-   <script src="app/js/jquery.min.js"></script>
+   
    <!-- MODERNIZR-->
    <script src="vendor/modernizr/modernizr.custom.js"></script>
    <!-- MATCHMEDIA POLYFILL-->
