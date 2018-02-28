@@ -1,6 +1,24 @@
 <!-- JQUERY-->
    <script src="vendor/jquery/dist/jquery.js"></script>
-
+<?php
+session_start();
+include('db/connection.php');
+$roll="";
+if(isset($_SESSION['id'])=="")
+{
+	header("Location:login.php");
+}
+else{
+	$user_id=$_SESSION['id'];
+	$user_type=$_SESSION['usertype'];
+	
+	$sql = "SELECT * FROM login_master WHERE user_id='$user_id' and user_type='$user_type'";
+	foreach ($dbh->query($sql) as $row)
+	{		
+		$roll=$row['user_type'];
+	}
+}
+?>
   <!-- top navbar-->
       <header class="topnavbar-wrapper">
          <!-- START Top Navbar-->
@@ -186,7 +204,10 @@
                   <li class="nav-heading ">
                      <span data-localize="sidebar.heading.HEADER">Main Navigation</span>
                   </li>
-				 
+				  <?php
+				  if($roll=='Admin')
+				  {
+				?>
                   <li class=" ">
                     <a href="#projects" title="Dashboard" data-toggle="collapse">
                         <em class="icon-user"></em>
@@ -294,7 +315,9 @@
                         
                      </ul>
                   </li>
-				  
+				  <?php
+				  }
+				  ?>
 			
 		   
                      </ul>
