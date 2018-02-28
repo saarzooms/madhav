@@ -67,7 +67,6 @@
    </div>
    <!-- =============== VENDOR SCRIPTS ===============-->
    <!-- MODERNIZR-->
-   <script src="app/js/jquery.min.js"></script>
    <script src="vendor/modernizr/modernizr.custom.js"></script>
    <!-- JQUERY-->
    <script src="vendor/jquery/dist/jquery.js"></script>
