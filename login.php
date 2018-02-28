@@ -87,14 +87,8 @@
    <script src="vendor/screenfull/dist/screenfull.js"></script>
    <!-- LOCALIZE-->
    <script src="vendor/jquery-localize-i18n/dist/jquery.localize.js"></script>
-   <!-- RTL demo-->
-   <script src="app/js/demo/demo-rtl.js"></script>
-    <!-- =============== Toast Message ===============-->
- <script type="text/javascript" src="toastmessage/javascript/jquery.toastmessage.js"></script>
- 
-   <!-- =============== APP SCRIPTS ===============-->
-   <script src="app/js/app.js"></script>
-   <script type="text/javascript" src="app/js/AjaxFileUpload.js"></script>
+   
+   
    <script src="js/login.js"></script>
 </body>
 
