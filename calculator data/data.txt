@@ -1,0 +1,68 @@
+Some features needed:
+
+The Dashboard
+- - - - - - - - - - - - - - - - - -
+Admin  - needs to be able to add and delete Loan Officer's - create an account for them. 
+The loan officers will then be able to access their own dashboard and account / create quotes (this is done using the loan calculator) 
+for borrowers and refer back to all instances (this is a list of all calculator instances saved with the ID of the loan officer linked).
+Loan officers will have following fields:
+1) Name
+2) Email ID
+3) Photo
+4) Phone
+5) Address
+6) State
+7) ZIP code
+8) Lender
+
+
+Admin Dashboard should have access to see:
+1) All loan officers in the system, with a way to search through them all. It should list in the grid and allow search by Name, email, phone, address, zip, lender
+2) All end customers (also known as borrowers/clients), with information of which loan officer they are linked to
+3) The admin should be able to access all loan calculator IDs (this will be looked at a little later)
+
+Loan officer dashboard should have:
+1) List of all end users linked to the loan officer's ID 
+2) Calculator instances linked to those end users, (all instances created with the loan officer's ID linked)
+3) A way to invite an end user to the tool. The loan officer can enter and create a database of customers. This will include:
+a) Salutation
+b) Name
+c) Marital status
+d) Spouse name
+e) email ID
+f) Phone
+g) credit score
+h) Address
+i) Facebook ID
+
+access can be granted to the client (Borrower/client via email in the tool), by sending out an invitation email.  The borrower/client should be able to view 
+and edit just that instance and the calculators contained within it.
+ 
+The dashboard should store all pre-approved instances for each Loan Officer.  The Loan Officer needs to be able to recall/edit/delete all instances created and associated with their account.  Every new client is an instance that the loan officer needs to be able to recall, update and forward to the client (link,  by email, which will use an URL validated to ensure access is as needed).  With the first login, borrower/client will need to accept the privacy policy and terms of service.  
+
+We need to use a grid with each quote (loan option instance) as a line underneath an instance.  There are certain fields captured within each quote that should be displayed in the grid.  Please see Dashboard_Fields attachment for fields that need to be stored for each quote instance with each borrower/end user as a header. 
+
+The grid should have sortable headers.  Double-clicking on each header should sort the grid.
+
+allow the loan officer to create a timer on quotes that face the consumer.  For example, allowing a quote to display until 9:30 am, tomorrow morning, then have it erase [rate, points] on the consumer facing side, but not on the Loan Officer side.  The loan officer needs to be able to create that setting.
+
+When a borrower/client makes changes to the calculator and saves,   the loan officer dashboard has to highlight the change. It should also show and alert in the notification area.
+
+
+Trusted Partner List
+- - - - - - - - - - - - - - - - 
+This is the area that should have a button similar to the "My Agent" tab shown in the Trusted_Partners attachment or as shown in the sampe_trusted_partner.pdf.  The loan officer or administrator needs a way to load from CSV/Excel or enter into a form, several business partners to be displayed in this area.  The area needs to be able to expand (maximize) out and collapse (minimize).  Ideal to have the display linked with their social profiles, along with a picture from their social profile.
+
+Ideally, there will be a whole page for each loan officer's trusted partners.  Then a way to select which ones go on the trusted partner's tab (like an enable/disable)
+The partners need to be categorized as well. Example, Carpenter, Plumber, etc.,
+Typical fields to capture and display:
+1) Photo
+2) Email ID
+3) Phone
+4) Business Name
+5) Contact name
+6) Address
+7) facebook profile
+8) Linked In profile
+9) Business hours
+10) Note
