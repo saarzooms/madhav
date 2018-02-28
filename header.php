@@ -1,7 +1,23 @@
 <!-- JQUERY-->
    <script src="vendor/jquery/dist/jquery.js"></script>
 <?php
-$roll='Admin';
+session_start();
+include('db/connection.php');
+$roll="";
+if(isset($_SESSION['id'])=="")
+{
+	header("Location:index.php");
+}
+else{
+	$user_id=$_SESSION['id'];
+	$user_type=$_SESSION['usertype'];
+	
+	$sql = "SELECT * FROM login_master WHERE user_id='$user_id' and user_type='$user_type'";
+	foreach ($dbh->query($sql) as $row)
+	{		
+		$roll=$row['user_type'];
+	}
+}
 ?>
   <!-- top navbar-->
       <header class="topnavbar-wrapper">
