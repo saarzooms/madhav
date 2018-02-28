@@ -81,7 +81,7 @@
    <!-- JQUERY EASING-->
    <script src="vendor/jquery.easing/js/jquery.easing.js"></script>
    <!-- ANIMO-->
-   <script src="../vendor/animo.js/animo.js"></script>
+   <script src="vendor/animo.js/animo.js"></script>
    <!-- SLIMSCROLL-->
    <script src="vendor/slimScroll/jquery.slimscroll.min.js"></script>
    <!-- SCREENFULL-->
